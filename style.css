@@ -1,0 +1,13 @@
+body{
+    padding: 0em 3em;
+}
+
+#color{
+    padding: 0% 5%;
+    border: 1px solid black;
+}
+
+#container{
+    display: flex;
+    justify-content: space-around;
+}

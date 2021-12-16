@@ -1,0 +1,1 @@
+I need to be green for five seconds then red for three then green for five… until there are 10 total green screens. Then, i need another script with that same thing repeated 8 total times with 30 second breaks in between
