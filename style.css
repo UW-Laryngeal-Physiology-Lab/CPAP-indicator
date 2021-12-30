@@ -2,6 +2,16 @@ body{
     padding: 0em 3em;
 }
 
+body:not(#container, #color, #ready, #instructions){
+    text-align: center;
+}
+
+#left-sub-container{
+    text-align: left;
+    border: 1px solid black;
+    padding: 1%;
+}
+
 #color{
     padding: 0% 5%;
     border: 1px solid black;
@@ -10,4 +20,8 @@ body{
 #container{
     display: flex;
     justify-content: space-around;
+}
+
+button{
+    margin: 3%;
 }
