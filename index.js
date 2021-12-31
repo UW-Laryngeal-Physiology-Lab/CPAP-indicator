@@ -4,23 +4,16 @@ let finished = document.getElementById('finished-indicator')
 let timer = document.getElementById('timer')
 
 //Stopwatch
-
-let sec = 0;
-let stopTime = false
-
-function cycle(){
-    if(stopTime === false){
-        console.log('Input time:', seconds, 'Actual time:', sec)
-        sec += 1;
-        timer.textContent = sec
-        setTimeout(cycle, 1000)
-    }
-}
-
-function stopTimer(){
-    if (stopTime === false){
-        stopTime = true
-    }
+function time(seconds){
+    timer.textContent = JSON.stringify(seconds)
+    wait(1000).then(()=>{
+        if(seconds > 1){
+            seconds--
+            time(seconds) 
+        }else{
+            return
+        }
+    })
 }
 
 let color = 1;
@@ -29,8 +22,8 @@ let count = 0;
 function update(){
     if(count < 9){
         if(color === 1){
+            time(5)
             colorDiv.style.backgroundColor = 'green'
-            // globalCount++
             wait(5000).then(()=>{
                 color--;
                 count++
@@ -39,6 +32,7 @@ function update(){
         }
         if(color === 0){
             colorDiv.style.backgroundColor = 'red'
+            time(3)
             wait(3000).then(()=>{
                 color++;
                 count++
@@ -48,16 +42,10 @@ function update(){
     }
     if(count === 9){
         colorDiv.style.backgroundColor = 'white'
+        timer.textContent = ''
         finished.textContent = 'Finished!'
     }
 }
-
-//this function strings together the multiple trials, seperated by 30 second breaks
-// let loop = 0;
-
-// function loop(){
-
-// }
 
 function wait(ms){
     return new Promise(resolve => setTimeout(resolve, ms));

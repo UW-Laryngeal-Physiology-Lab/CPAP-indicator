@@ -1,18 +1,21 @@
 body{
     padding: 0em 3em;
+    background-color: #f8f9fa;
 }
 
-body:not(#container, #color, #ready, #instructions){
+body:not(#container, #color, #ready, #instructions, #hero){
     text-align: center;
 }
 
 #left-sub-container{
+    margin-top: 3%;
     text-align: left;
     border: 1px solid black;
     padding: 1%;
 }
 
 #color{
+    margin-top: 3%;
     padding: 0% 5%;
     border: 1px solid black;
 }
@@ -24,4 +27,17 @@ body:not(#container, #color, #ready, #instructions){
 
 button{
     margin: 3%;
+}
+
+#timer{
+    padding-top: 15%;
+}
+
+header{
+    text-align: left;
+}
+
+#hero{
+    height: auto;
+    width: 80%;
 }
