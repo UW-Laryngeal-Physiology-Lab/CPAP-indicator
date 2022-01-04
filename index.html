@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./assets/images/voicelab.png">
     
     <title>CPAP Timer</title>
 </head>
@@ -21,7 +22,7 @@
                 After you press start, the color indicator will turn green.<br>
                 While the indicator is green, you will phonate into the tube.<br>
                 After 5 seconds, the box will turn red for 3 seconds, at which point you will stop phonating.<br>
-                You will repeat this process 10 times, then take a 30 second break.<br>
+                You will do this a total of 10 times, then take a 30 second break.<br>
                 <hr>
                 After your break, you will repeat the process again 7 more times.
             </p>
@@ -30,11 +31,12 @@
             <h1 id="indicator">Color Indicator</h1>
             <h1 id="timer"></h1>
             <h3 id="finished-indicator"></h3>
+            <h3 id="trial-indicator"></h3>
         </div>
     </div>
     <button id="start">START</button>
     <footer>
-        <h4>
+        <h4 id="attribution">
             Property of the University of Wisconsin Laryngeal Physiology Lab.
         </h4>
     </footer>
