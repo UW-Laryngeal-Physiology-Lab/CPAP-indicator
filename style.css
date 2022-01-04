@@ -34,7 +34,13 @@ button{
 }
 
 header{
-    text-align: left;
+   display: flex;
+   justify-content: space-between;
+}
+
+#voicelab{
+    height: auto;
+    width: 10%;
 }
 
 #hero{
